@@ -1,20 +1,5 @@
 body {
-  background-color: teal; }
-
-#container {
-	display: flex;
-	justify-content: center;
-}
-
-#markdown {
-	width: 40%;
-	margin: 10px;
-}
-
-#codeHTML {
-	background-color: white;
-	width: 40%;
-	margin: 10px;
-}
+  background-color: teal;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
