@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>React all the things !</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+</head>
+<body>
+
+	<h1>Editeur de markdown</h1>
+	
+	<div id="container">
+		<div id="markdown"></div>
+
+		<div id="codeHTML"></div>
+	</div>
+
+	<form action="#" method="post">
+		Mots-clés : <input type="text" name="recherche">
+		<button class="new_doc">Nouveau document</button>
+		<button class="save">Sauvegarder</button>
+	</form>
+
+	<script src="/lib/codemirror.js"></script>
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="/node_modules/marked/marked.min.js"></script>
+	<script src="/mode/markdown/markdown.js"></script>
+	<script src="/mode/javascript/javascript.js"></script>
+	<script src="/mode/xml/xml.js"></script>
+	<script src="/js/bundle.js"></script>
+</body>
+</html>
