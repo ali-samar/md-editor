@@ -1,6 +1,12 @@
 body {
   background-color: teal;
-  color: white; }
+  color: white; 
+}
+
+h1 {
+	text-align: center;
+	font-size: 2.5em;
+}
 
 #container {
 	display: flex;
@@ -19,6 +25,24 @@ body {
     font-size: 11px;
     margin: 10px;
     padding-left: 5px;
+}
+
+.new_doc {
+	background-color: white;
+	color: teal;
+	font-weight: bold;
+	height: 40px;
+	width: 120px;
+	border-radius: 10px;
+}
+
+.save {
+	background-color: white;
+	color: teal;
+	font-weight: bold;
+	height: 40px;
+	width: 120px;
+	border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
