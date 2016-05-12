@@ -7,18 +7,15 @@ require('codemirror/mode/xml/xml');
 require('codemirror/mode/markdown/markdown');
 
 var App = React.createClass({
+    componentDidMount: function() {
+        this.setState({
+            code: localStorage.getItem('markedText')
+        });
+    },
     getInitialState: function() {
-        var stockText = localStorage.getItem('markedText');
-        
-        if(typeof stockText == 'undefined' || stockText == null){
-            stockText = " ";
-        } else {
-            var mark = marked(stockText);
-            $("#codeHTML").html(mark);
             return {
-                code: stockText
+                code: ""
             };
-        }
     },
     updateCode: function(newCode) {
         this.setState({

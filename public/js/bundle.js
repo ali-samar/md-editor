@@ -31929,12 +31929,14 @@ require('codemirror/mode/markdown/markdown');
 var App = React.createClass({
     displayName: 'App',
 
+    componentDidMount: function componentDidMount() {
+        this.setState({
+            code: localStorage.getItem('markedText')
+        });
+    },
     getInitialState: function getInitialState() {
-        var stockText = localStorage.getItem('markedText');
-        var mark = marked(stockText);
-        $("#codeHTML").html(mark);
         return {
-            code: stockText
+            code: ""
         };
     },
     updateCode: function updateCode(newCode) {
