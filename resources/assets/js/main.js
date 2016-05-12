@@ -9,16 +9,11 @@ require('codemirror/mode/markdown/markdown');
 var App = React.createClass({
     getInitialState: function() {
         var stockText = localStorage.getItem('markedText');
-        
-        if(typeof stockText == 'undefined' || stockText == null){
-            stockText = " ";
-        } else {
-            var mark = marked(stockText);
-            $("#codeHTML").html(mark);
-            return {
-                code: stockText
-            };
-        }
+        var mark = marked(stockText);
+        $("#codeHTML").html(mark);
+        return {
+            code: stockText
+        };
     },
     updateCode: function(newCode) {
         this.setState({

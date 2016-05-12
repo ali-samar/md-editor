@@ -31931,16 +31931,11 @@ var App = React.createClass({
 
     getInitialState: function getInitialState() {
         var stockText = localStorage.getItem('markedText');
-
-        if (typeof stockText == 'undefined' || stockText == null) {
-            stockText = " ";
-        } else {
-            var mark = marked(stockText);
-            $("#codeHTML").html(mark);
-            return {
-                code: stockText
-            };
-        }
+        var mark = marked(stockText);
+        $("#codeHTML").html(mark);
+        return {
+            code: stockText
+        };
     },
     updateCode: function updateCode(newCode) {
         this.setState({
