@@ -2,4 +2,23 @@ body {
   background-color: teal;
   color: white; }
 
+#container {
+	display: flex;
+	justify-content: center;
+}
+
+#markdown {
+	width: 40%;
+	margin: 10px;
+}
+
+#codeHTML {
+	width: 40%;
+	background-color: white;
+	color: black;
+    font-size: 11px;
+    margin: 10px;
+    padding-left: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
