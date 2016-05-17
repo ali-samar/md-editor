@@ -6,10 +6,11 @@ body {
 h1 {
 	text-align: center;
 	font-size: 2.5em;
+	color: white;
 }
 
-.cm-header {
-	color: #c8c8a9!important;
+li {
+	font-size: 1.5em;
 }
 
 #container {
@@ -23,12 +24,22 @@ h1 {
 }
 
 #codeHTML {
+	font-size: 1.5em;
+    color: white;
 	width: 40%;
 	background-color: #f9cdad ;
-	color: black;
     font-size: 11px;
     margin: 10px;
     padding-left: 5px;
+    overflow: auto;
+}
+
+#listedocs {
+	width: 30%;
+}
+
+#docs {
+	text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
