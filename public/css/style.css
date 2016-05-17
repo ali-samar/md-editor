@@ -6,6 +6,15 @@ body {
 h1 {
 	text-align: center;
 	color: white;
+	font-size: 3em!important;
+}
+
+h2 {
+	font-size: 2em!important;
+}
+
+h3 {
+	font-size: 1.5em!important;
 }
 
 #container {
