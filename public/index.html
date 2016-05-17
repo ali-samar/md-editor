@@ -5,25 +5,32 @@
 	<title>React all the things !</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="lib/codemirror.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
-	<h1>Editeur de markdown</h1>
 	
 	<div id="container">
 		<div id="markdown"></div>
 
 		<div id="codeHTML"></div>
 		<div id="listedocs">
-			<h3 id="docs">Liste des documents :</h3>
+			<h3 id="docs">Mes documents :</h3>
 		</div>
 	</div>
+	
+	<div id="boutons">
+		<a class="waves-effect waves-light btn grey"><i class="material-icons right">mode_edit</i>Nouveau document</a>
+		<a class="waves-effect waves-light btn grey"><i class="material-icons right">done</i>Sauvegarder</a>
+		<a class="waves-effect waves-light btn grey"><i class="material-icons right">play_for_work</i>Télécharger</a>
+	</div>	
 
 	<script src="lib/codemirror.js"></script>
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="/node_modules/marked/marked.min.js"></script>
 	<script src="mode/markdown/markdown.js"></script>
 	<script src="mode/javascript/javascript.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 	<script src="mode/xml/xml.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
