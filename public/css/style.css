@@ -1,11 +1,15 @@
 body {
-  background-color: teal;
+  background-color: #fc9d9a;
   color: white; 
 }
 
 h1 {
 	text-align: center;
 	font-size: 2.5em;
+}
+
+.cm-header {
+	color: #c8c8a9!important;
 }
 
 #container {
@@ -20,29 +24,11 @@ h1 {
 
 #codeHTML {
 	width: 40%;
-	background-color: white;
+	background-color: #f9cdad ;
 	color: black;
     font-size: 11px;
     margin: 10px;
     padding-left: 5px;
-}
-
-.new_doc {
-	background-color: white;
-	color: teal;
-	font-weight: bold;
-	height: 40px;
-	width: 120px;
-	border-radius: 10px;
-}
-
-.save {
-	background-color: white;
-	color: teal;
-	font-weight: bold;
-	height: 40px;
-	width: 120px;
-	border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
