@@ -31948,30 +31948,52 @@ var Markdown = React.createClass({
         localStorage.setItem('markedText', newCode);
     },
     render: function render() {
-        var options = {
+        var myCodeMirror = {
             lineNumbers: true,
             mode: "markdown"
         };
-        return React.createElement(Codemirror, { value: this.state.code, onChange: this.updateCode, options: options });
+        return React.createElement(Codemirror /*ref={(ref)=>{this.editor=ref}}*/, { value: this.state.code, onChange: this.updateCode, options: myCodeMirror });
     }
 });
 
-var Menu = React.createClass({
-    displayName: 'Menu',
+var Nouveaudoc = React.createClass({
+    displayName: 'Nouveaudoc',
 
     render: function render() {
-        return React.createElement('nav', null, React.createElement('button', { onClick: this.props.deltext }, 'Nouveau doc'));
+        return React.createElement('div', { className: 'boutons' }, React.createElement('a', { className: 'waves-effect waves-light btn grey', onClick: this.props.deltext }, React.createElement('i', { className: 'material-icons right' }, 'mode_edit'), 'Nouveau document'));
+    }
+});
+
+var Sauvegarder = React.createClass({
+    displayName: 'Sauvegarder',
+
+    render: function render() {
+        return React.createElement('div', { className: 'boutons' }, React.createElement('a', { className: 'waves-effect waves-light btn grey' }, React.createElement('i', { className: 'material-icons right' }, 'done'), 'Sauvegarder'));
+    }
+});
+
+var Telecharger = React.createClass({
+    displayName: 'Telecharger',
+
+    render: function render() {
+        return React.createElement('div', { className: 'boutons' }, React.createElement('a', { className: 'waves-effect waves-light btn grey' }, React.createElement('i', { className: 'material-icons right' }, 'play_for_work'), 'Télécharger'));
     }
 });
 
 var Wrapper = React.createClass({
     displayName: 'Wrapper',
 
+    getInitialState: function getInitialState() {
+        return {
+            code: ""
+        };
+    },
     refresh: function refresh() {
-        alert('Voulez-vous sauvegarder les modifications?');
+        //alert('Voulez-vous sauvegarder les modifications?');
+        localStorage.clear();
     },
     render: function render() {
-        return React.createElement('div', null, React.createElement(Menu, { deltext: this.refresh }), React.createElement(Markdown, null));
+        return React.createElement('div', null, React.createElement(Markdown, null), React.createElement(Nouveaudoc, { deltext: this.refresh }), React.createElement(Sauvegarder, null), React.createElement(Telecharger, null));
     }
 });
 
