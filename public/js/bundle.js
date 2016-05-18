@@ -31926,8 +31926,8 @@ require('codemirror/mode/javascript/javascript');
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/markdown/markdown');
 
-var App = React.createClass({
-    displayName: 'App',
+var Markdown = React.createClass({
+    displayName: 'Markdown',
 
     componentDidMount: function componentDidMount() {
         this.setState({
@@ -31956,7 +31956,26 @@ var App = React.createClass({
     }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('markdown'));
+var Menu = React.createClass({
+    displayName: 'Menu',
+
+    render: function render() {
+        return React.createElement('nav', null, React.createElement('button', { onClick: this.props.deltext }, 'Nouveau doc'));
+    }
+});
+
+var Wrapper = React.createClass({
+    displayName: 'Wrapper',
+
+    refresh: function refresh() {
+        alert('Voulez-vous sauvegarder les modifications?');
+    },
+    render: function render() {
+        return React.createElement('div', null, React.createElement(Menu, { deltext: this.refresh }), React.createElement(Markdown, null));
+    }
+});
+
+ReactDOM.render(React.createElement(Wrapper, null), document.getElementById('markdown'));
 
 },{"codemirror/mode/javascript/javascript":160,"codemirror/mode/markdown/markdown":161,"codemirror/mode/xml/xml":163,"marked":165,"react":157,"react-codemirror":167,"react-dom":28}]},{},[168]);
 

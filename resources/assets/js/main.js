@@ -6,7 +6,7 @@ require('codemirror/mode/javascript/javascript');
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/markdown/markdown');
 
-var App = React.createClass({
+var Markdown = React.createClass({
     componentDidMount: function() {
         this.setState({
             code: localStorage.getItem('markedText')
@@ -34,4 +34,29 @@ var App = React.createClass({
     }
 });
 
-ReactDOM.render(<App />, document.getElementById('markdown'));
+var Menu = React.createClass({
+    render: function() {
+        return (
+            <nav><button onClick={this.props.deltext}>Nouveau doc</button></nav>
+        );
+    }
+});
+
+var Wrapper = React.createClass({
+    refresh: function() {
+        alert('Voulez-vous sauvegarder les modifications?');
+    },
+    render: function() {
+        return (
+            <div>
+            <Menu deltext={this.refresh} />
+            <Markdown />
+            </div>
+        );
+    }
+});
+
+ReactDOM.render(
+    <Wrapper />, 
+    document.getElementById('markdown')
+);
